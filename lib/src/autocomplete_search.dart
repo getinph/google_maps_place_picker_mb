@@ -127,6 +127,8 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
     return TextField(
       controller: controller,
       focusNode: focus,
+      // TOM MODIF
+      style: TextStyle(color: Colors.black),
       decoration: InputDecoration(
         hintText: widget.hintText,
         border: InputBorder.none,
@@ -266,7 +268,9 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
           Expanded(
             child: Text(
               widget.searchingText ?? "Searching...",
-              style: TextStyle(fontSize: 16),
+              // TOM MODIF
+              // style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 12, color: Colors.black),
             ),
           )
         ],
