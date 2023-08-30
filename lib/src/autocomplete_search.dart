@@ -127,6 +127,9 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
     return TextField(
       controller: controller,
       focusNode: focus,
+
+      /// TOM MODIF
+      cursorColor: Colors.black,
       // TOM MODIF
       style: TextStyle(color: Colors.black),
       decoration: InputDecoration(
