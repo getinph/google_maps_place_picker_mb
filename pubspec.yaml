@@ -29,7 +29,10 @@ dependency_overrides:
   http: any
   package_info_plus: any
 
-flutter: null
+flutter: 
+
+   assets: 
+    - assets/gifs/
 
 false_secrets:
  - /example/lib/keys.dart

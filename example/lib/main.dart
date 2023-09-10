@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_place_picker_mb/google_maps_place_picker.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
-// ignore: implementation_imports, unused_import
-import 'package:google_maps_place_picker_mb/src/google_map_place_picker.dart'; // do not import this yourself
-import 'dart:io' show Platform;
-
 // Your api key storage.
-import 'keys.dart';
+// import 'keys.dart';
 
 // Only to control hybrid composition and the renderer in Android
 import 'package:google_maps_flutter_android/google_maps_flutter_android.dart';
 import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
+import 'package:google_maps_place_picker_mb/google_maps_place_picker.dart';
+// ignore: implementation_imports, unused_import
+import 'package:google_maps_place_picker_mb/src/google_map_place_picker.dart'; // do not import this yourself
 
 void main() => runApp(MyApp());
 
@@ -162,9 +159,10 @@ class _HomePageState extends State<HomePage> {
                               return PlacePicker(
                                 resizeToAvoidBottomInset:
                                     false, // only works in page mode, less flickery
-                                apiKey: Platform.isAndroid
-                                    ? APIKeys.androidApiKey
-                                    : APIKeys.iosApiKey,
+                                apiKey: 'APIKEY',
+                                // Platform.isAndroid
+                                //     ? APIKeys.androidApiKey
+                                //     : APIKeys.iosApiKey,
                                 hintText: "Find a place ...",
                                 searchingText: "Please wait ...",
                                 selectText: "Select place",
@@ -321,9 +319,10 @@ class _HomePageState extends State<HomePage> {
                       width: MediaQuery.of(context).size.width * 0.75,
                       height: MediaQuery.of(context).size.height * 0.35,
                       child: PlacePicker(
-                          apiKey: Platform.isAndroid
-                              ? APIKeys.androidApiKey
-                              : APIKeys.iosApiKey,
+                          apiKey: 'APIKEY',
+                          // Platform.isAndroid
+                          //     ? APIKeys.androidApiKey
+                          //     : APIKeys.iosApiKey,
                           hintText: "Find a place ...",
                           searchingText: "Please wait ...",
                           selectText: "Select place",
