@@ -1,11 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker_mb/google_maps_place_picker.dart';
 import 'package:google_maps_place_picker_mb/providers/place_provider.dart';
@@ -475,12 +473,12 @@ class GoogleMapPlacePicker extends StatelessWidget {
 
   Widget _buildLoadingIndicator() {
     return Container(
-      height: 48,
+      height: 55,
       child: const Center(
         child: SizedBox(
           width: 24,
           height: 24,
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(color: Colors.lightGreen),
         ),
       ),
     );

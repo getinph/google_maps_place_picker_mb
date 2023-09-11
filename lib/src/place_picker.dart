@@ -285,6 +285,7 @@ class _PlacePickerState extends State<PlacePicker> {
           future: _futureProvider,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
+              // TOM MODIF
               // return const Center(child: CircularProgressIndicator());
               return Container(
                 height: double.infinity,
