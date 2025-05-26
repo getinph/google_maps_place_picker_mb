@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter_google_maps_webservices/geocoding.dart';
+import 'package:flutter_google_maps_webservices/places.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker_mb/src/models/pick_result.dart';
 import 'package:google_maps_place_picker_mb/src/place_picker.dart';
-import 'package:google_maps_webservice/geocoding.dart';
-import 'package:google_maps_webservice/places.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 
@@ -32,8 +32,7 @@ class PlaceProvider extends ChangeNotifier {
     );
   }
 
-  static PlaceProvider of(BuildContext context, {bool listen = true}) =>
-      Provider.of<PlaceProvider>(context, listen: listen);
+  static PlaceProvider of(BuildContext context, {bool listen = true}) => Provider.of<PlaceProvider>(context, listen: listen);
 
   late GoogleMapsPlaces places;
   late GoogleMapsGeocoding geocoding;
@@ -82,8 +81,7 @@ class PlaceProvider extends ChangeNotifier {
         // Or you can swallow the issue and respect the user's privacy
         return;
       }
-      return Future.error(
-          'Location permissions are permanently denied, we cannot request permissions.');
+      return Future.error('Location permissions are permanently denied, we cannot request permissions.');
     }
 
     _currentPosition = await Geolocator.getCurrentPosition(
